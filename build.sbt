@@ -4,9 +4,9 @@ name := "javadoc-sbt"
 
 organization := "de.corux"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.2.0"
 
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.2"
 
 credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
 
@@ -17,7 +17,7 @@ publishArtifact in Test := false
 pomIncludeRepository := { _ => false }
 
 publishTo <<= version { v: String =>
-val nexus = "http://tomcat.wallura.org/nexus/"
+val nexus = "http://tomcat.corux.de/nexus/"
 if (v.trim.endsWith("SNAPSHOT"))
   Some("snapshots" at nexus + "content/repositories/snapshots")
 else                            
