@@ -25,7 +25,7 @@ object JavadocPlugin extends Plugin {
 
   val javadocSettings = Seq(
     javadocOptions <<= (fullClasspath in Compile) map { fcp => Seq(
-        "-link", "http://download.oracle.com/javase/7/docs/api/"
+        "-link", "http://download.oracle.com/javase/8/docs/api/"
       , "-classpath", fcp.map(_.data).map(_.getPath).mkString(java.io.File.pathSeparator)
     )},
     javadoc <<= (target in javadoc, javaSource in Compile, javadocSubpackages, javadocOptions, streams) map {
