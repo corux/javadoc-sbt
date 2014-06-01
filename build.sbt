@@ -4,9 +4,11 @@ name := "javadoc-sbt"
 
 organization := "de.corux"
 
-version := "0.3.0"
+version := "0.3.1-SNAPSHOT"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.10.4"
+
+crossScalaVersions := Seq("2.10.4")
 
 credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
 
