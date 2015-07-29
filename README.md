@@ -7,8 +7,8 @@ Generate java api docs with javadoc.
 In your own project, create or edit `project/plugins.sbt` and add
 
     addSbtPlugin("de.corux" % "javadoc-sbt" % "0.2.0")
-    resolvers += "corux-releases" at "http://tomcat.corux.de/nexus/content/repositories/releases/"
-    resolvers += "corux-snapshots" at "http://tomcat.corux.de/nexus/content/repositories/snapshots/"
+    resolvers += "corux-releases" at "https://nexus.corux.de/content/repositories/releases/"
+    resolvers += "corux-snapshots" at "https://nexus.corux.de/content/repositories/snapshots/"
 
 In your `build.sbt` add
 
