@@ -19,7 +19,7 @@ object JavadocPlugin extends Plugin {
     println("Options: "+options.mkString(" "))
     val cmd = <x>javadoc -sourcepath {source} -d {target} -subpackages {packages.mkString(":")} {options.mkString(" ")}</x>
     println("Executing: "+cmd.text)
-    cmd ! log
+    cmd.text ! log
     target
   }
 
